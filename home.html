@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>home</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="ss.css">
+	
+</head>
+<body>
+	
+	<!-- Place your favorite sites here, I'd structure em with an <a><img></a> (32x32 pngs) -->
+	
+	<div id="favorites">
+		<a href="http://youtube.com"><img src="youtube.png"></a>
+		<a href="https://craigslist.org"><img src="craigslist.png"></a>
+		<a href="http://newegg.com"><img src="newegg.png"></a>
+		<a href="http://stackoverflow.com"><img src="stack.png"></a>
+		<a href="http://twitch.tv"><img src="twitch.png"></a>
+	</div>
+	
+	<!-- Google search, you can copy pasta the googleBar styling and 
+	use it for your preferred search engine. I think they should stack
+	 on top of each other....-->
+	
+	<form method="get" action="http://www.google.com/search" >
+		<div style="width:100%;left:0px;">
+			<input type="text" name="q" id="googleBar" size="25"
+			maxlength="100" placeholder="Search the botnet..." 
+			onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+			<input type="submit" style="visibility:hidden;"/>
+		</div>
+	</form>	
+	
+	<div id="eight">
+		<a href="https://www.8ch.net/boards.html"><img src="8ch.png" id="browse"></a>
+		
+		<form method="post" id="ecBar" onsubmit="document.location = ''; document.location = 'https://www.8ch.net/' + document.getElementById('ecText').value; return false;">
+			<input type="text" id="ecText" maxlength="8" name="8" size="25" placeholder="Specify a /board/...">
+		</form>
+		
+		<ul>
+			<li><a>Place links to your favorite boards here!</a></li>
+		</ul>
+		
+	</div>
+	
+	<div id="r">
+		<a href="http://www.reddit.com"><img src="reddit.png" id="browse"></a>
+		
+		<form method="post" id="rBar" onsubmit="document.location = ''; document.location = 'http://www.reddit.com/r/' + document.getElementById('rText').value; return false;">
+			<input type="text" id="rText" maxlength="8" name="8" size="25" placeholder="Specify a subplebbit..."
+		<input type="submit"> <!-- dont ask -->
+		</form>
+		
+		<ul>
+			<li><a>Place links to either reddit or another chan of yours here!</a></li>
+		</ul>
+
+	</div>
+<div id="learn">
+	
+		<a href="http://www.w3schools.com"><img src="w3.png"></a>
+		<a href="http://melonjs.github.io/docs/"><img src="melonjs.png"></a>
+		<a href="http://nodejs.org/api/"><img src="nodejs.png"></a>
+		<a href="http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx"><img src="csharp.png"></a>
+		<a href="http://www.gnu.org/software/bash/manual/bashref.html"><img src="bash.png"></a>
+		<a href="http://socket.io/docs/"><img src="socket.png"></a>
+		<br>
+		<!--This section is for various learning resources I needed before,
+		 feel free to use this #learn for whatever it is you need to do.-->
+</div>
+
+</body>
+</html>
