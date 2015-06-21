@@ -1,0 +1,157 @@
+body
+{
+background-size:cover;
+overflow-x:hidden;
+}
+html body
+{
+height:100vh;
+width:100%;
+margin:0 0 0 0;
+padding:0 0 0 0;
+}
+
+/*Favorite Bar && learning resources (optional)*/
+
+#favorites
+{
+width:100%;
+background-color:#000000;
+opacity:0.87;
+top:0;
+}
+
+#learn /*Uncomment this in the HTML to use this as a simple list of links to learning material or a reading list.*/
+{
+position:relative;
+background-color:#000;
+padding:-2px;
+float:left;
+width:100%;
+margin-top:32px;
+padding-bottom:0px;
+z-index:5;
+opacity:1;
+}
+#learn a
+{
+padding:24px;
+}
+
+#tag /*Used for tagging and organizing the learn library (if enabled)*/
+{
+color:#37C867;
+}
+
+#googleBar/*Search the internet using google or your preferred search engine.*/
+{
+position:relative;
+border:none;
+padding:0 0 0 0;
+margin: 0px 0px 0px 0px;
+color:#FFF;
+width:100%;
+background-color:#000;
+opacity:0.7;
+height:32px;
+} 
+ 
+/*********************/
+
+/***********************
+ * Board divs (middle) *
+ **********************/
+#eight
+{
+overflow-y:scroll;
+overflow-x:hidden;
+position:relative;
+float:left;
+width:50%;
+height:75vh;
+background-color:#000000;
+opacity:0.87;
+text-align:left;
+z-index:5;
+}
+#eight img
+{
+padding:0px;
+}
+#r
+{
+position:relative;
+overflow-x:hidden;
+float:right;
+width:50%;
+height:75vh;
+background-color:#000000;
+opacity:0.87;
+text-align:right;
+z-index:5;
+}
+#r li
+{
+margin-right:24px;
+}
+#r img
+{
+float:right;
+padding:0px;
+margin-bottom:4px;
+}
+button
+{
+visibility:hidden;
+}
+
+#ecText,#rText
+{
+margin-left:1%;
+margin-right:1%;
+color:#FFF;
+width:97%;
+background-color:#000;
+height:32px;
+}
+
+.subtitle img
+{
+width:48px;
+height:48px;
+float:left;
+z-index:6;
+margin-left:-24px;
+padding-right:12px;
+}
+/**********************/
+/***********************
+ * Raw elements        *
+ **********************/
+li
+{
+padding-top:15px;
+font-size:20px;
+color:#000000;
+font-family:sans-serif;
+}
+a
+{
+color:white;
+text-decoration:none;
+}
+img
+{
+padding-right:1%;
+padding-left:24px;
+padding-top:5px;
+padding-bottom:0px;
+height:32px;
+width:32px;
+}
+/**********************/
+
+
+
+
+
