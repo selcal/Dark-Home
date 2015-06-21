@@ -1,49 +1,40 @@
 body
 {
-background-size:cover;
 overflow-x:hidden;
 }
 html body
 {
-height:100vh;
+background-image: url("bg.png");
+background-repeat:no-repeat;
+background-size:inherit;
+height:100%;
 width:100%;
 margin:0 0 0 0;
 padding:0 0 0 0;
 }
 
-/*Favorite Bar && learning resources (optional)*/
+/*Favorite Bar && learning resources*/
 
 #favorites
 {
 width:100%;
 background-color:#000000;
-opacity:0.87;
+opacity:0.70;
 top:0;
 }
-
-#learn /*Uncomment this in the HTML to use this as a simple list of links to learning material or a reading list.*/
+#learn
 {
 position:relative;
-background-color:#000;
-padding:-2px;
 float:left;
-width:100%;
-margin-top:32px;
-padding-bottom:0px;
-z-index:5;
-opacity:1;
+padding-top:5px;
+bottom:0;
+width: 100%;
+opacity:0.45;
 }
-#learn a
-{
-padding:24px;
-}
-
-#tag /*Used for tagging and organizing the learn library (if enabled)*/
-{
-color:#37C867;
-}
-
-#googleBar/*Search the internet using google or your preferred search engine.*/
+/***********************
+ * Google and searches *
+ **********************/
+#googleBar
 {
 position:relative;
 border:none;
@@ -52,7 +43,7 @@ margin: 0px 0px 0px 0px;
 color:#FFF;
 width:100%;
 background-color:#000;
-opacity:0.7;
+opacity:0.6;
 height:32px;
 } 
  
@@ -70,36 +61,19 @@ float:left;
 width:50%;
 height:75vh;
 background-color:#000000;
-opacity:0.87;
-text-align:left;
-z-index:5;
-}
-#eight img
-{
-padding:0px;
+opacity:0.7;
 }
 #r
 {
 position:relative;
 overflow-x:hidden;
-float:right;
+float:left;
 width:50%;
 height:75vh;
 background-color:#000000;
-opacity:0.87;
-text-align:right;
-z-index:5;
+opacity:0.7;
 }
-#r li
-{
-margin-right:24px;
-}
-#r img
-{
-float:right;
-padding:0px;
-margin-bottom:4px;
-}
+
 button
 {
 visibility:hidden;
@@ -114,17 +88,9 @@ width:97%;
 background-color:#000;
 height:32px;
 }
-
-.subtitle img
-{
-width:48px;
-height:48px;
-float:left;
-z-index:6;
-margin-left:-24px;
-padding-right:12px;
-}
 /**********************/
+
+
 /***********************
  * Raw elements        *
  **********************/
@@ -138,14 +104,12 @@ font-family:sans-serif;
 a
 {
 color:white;
-text-decoration:none;
 }
 img
 {
 padding-right:1%;
-padding-left:24px;
+padding-left:25px;
 padding-top:5px;
-padding-bottom:0px;
 height:32px;
 width:32px;
 }
