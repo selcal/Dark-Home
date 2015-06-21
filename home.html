@@ -3,29 +3,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<title>home</title>
+	<title>Home</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="ss.css">
-	
+	<script>
+	function loadWall()
+	{
+		var wallpapers = 30; //How many wallpapers are in the bg folder, name them from bg1.png -> bg30.png
+		var whichWall = "url('bg/bg"+(Math.floor(Math.random() * wallpapers) + 1)+ ".png')";
+		document.getElementById("bd").style.backgroundImage = whichWall;
+	}
+	</script>
 </head>
-<body>
-	
-	<!-- Place your favorite sites here, I'd structure em with an <a><img></a> (32x32 pngs) -->
-	
+<body id="bd" onload="loadWall()">
+	<!-- Place your favorite sites here: -->
 	<div id="favorites">
-		<a href="http://youtube.com"><img src="youtube.png"></a>
-		<a href="https://craigslist.org"><img src="craigslist.png"></a>
-		<a href="http://newegg.com"><img src="newegg.png"></a>
+		<a href="http://www.youtube.com"><img src="youtube.png"></a>
+		<a href="http://www.craigslist.org"><img src="craigslist.png"></a>
 		<a href="http://stackoverflow.com"><img src="stack.png"></a>
-		<a href="http://twitch.tv"><img src="twitch.png"></a>
 	</div>
 	
-	<!-- Google search, you can copy pasta the googleBar styling and 
-	use it for your preferred search engine. I think they should stack
-	 on top of each other....-->
+	<!-- Google search, replace this element and id it 'googleBar' properly to use it for your preferred search engine...-->
 	
-	<form method="get" action="http://www.google.com/search" >
+	<form method="get" action="http://www.google.com/search">
 		<div style="width:100%;left:0px;">
 			<input type="text" name="q" id="googleBar" size="25"
 			maxlength="100" placeholder="Search the botnet..." 
@@ -34,44 +35,61 @@
 		</div>
 	</form>	
 	
+	
 	<div id="eight">
-		<a href="https://www.8ch.net/boards.html"><img src="8ch.png" id="browse"></a>
+		<a href="https://www.8ch.net/boards.html"><img src="8chan.png" id="browse"></a>
 		
-		<form method="post" id="ecBar" onsubmit="document.location = 'https://www.8ch.net/' + document.getElementById('ecText').value; return false;">
+		<form method="post" id="ecBar" onsubmit="document.location = 'https://www.8ch.net/' + document.getElementById('ecText').value + '/catalog.html'; return false;">
 			<input type="text" id="ecText" maxlength="24" name="8" size="25" placeholder="Specify a /board/...">
 		</form>
 		
 		<ul>
-			<li><a>Place links to your favorite boards here!</a></li>
+			<li><a style="font-size:115%;text-decoration:none;" href="https://8ch.net/n/catalog.html">read the news on /n/ <b style="color:#D8D911">@</b></a></li>
+			<li><a href="https://8ch.net/agdg/">/agdg/</a></li>
+			<li><a href="https://8ch.net/b/">/random/</a></li>
+			<li><a href="https://8ch.net/cyber/">/cyber/</a></li>
+			<li><a href="https://8ch.net/tech/">/technology/</a></li>
+			<li><a href="https://8ch.net/prog/">/programming/</a></li>
+			<li><a href="https://8ch.net/v/">/vidya/</a></li>
+			<li><a href="https://8ch.net/lucid/">/lucid dreaming/</a></li>
+			<li><a href="https://8ch.net/sci/">/science & math/</a></li>
 		</ul>
 		
 	</div>
 	
 	<div id="r">
-		<a href="http://www.reddit.com"><img src="reddit.png" id="browse"></a>
+		<a href="http://www.lainchan.org"><img src="lainchan.png" id="browse"></a>
 		
-		<form method="post" id="rBar" onsubmit="document.location = 'http://www.reddit.com/r/' + document.getElementById('rText').value; return false;">
-			<input type="text" id="rText" maxlength="24" name="8" size="25" placeholder="Specify a subplebbit..."
+		<form method="post" id="rBar" onsubmit="document.location = 'http://www.lainchan.org/' + document.getElementById('rText').value + '/'; return false;">
+			<input type="text" id="rText" maxlength="16" name="8" size="25" placeholder="Specify a /board/..."
 		<input type="submit"> <!-- dont ask -->
 		</form>
 		
 		<ul>
-			<li><a>Place links to either reddit or another chan of yours here!</a></li>
+			<li><a style="font-size:115%;text-decoration:none;" href="https://www.lainchan.org/all/"><b style="color:#D8D911">!</b> overlook recent posts</a></li>
+			<li><a style="font-size:115%;text-decoration:none;" href="https://www.lainchan.org/all/"><b style="color:#D8D911">~</b> /radio/</a></li>
+			<li><a href="https://www.lainchan.org/cyb/">/cyber/</a></li>
+			<li><a href="https://www.lainchan.org/λ/">/ λ /</a></li>
+			<li><a href="https://www.lainchan.org/tech/">/technology/</a></li>
+			<li><a href="https://www.lainchan.org/rpg/">/vidya/</a></li>
+			<li><a href="https://www.lainchan.org/diy/">/diy/</a></li>
+			<li><a href="https://www.lainchan.org/w/">/animus/</a></li>
+			<li><a href="https://www.lainchan.org/zzz/">/dreams/</a></li>
+			<li><a href="https://www.lainchan.org/lit/">/literature/</a></li>
 		</ul>
 
 	</div>
-<div id="learn">
 	
-		<a href="http://www.w3schools.com"><img src="w3.png"></a>
-		<a href="http://melonjs.github.io/docs/"><img src="melonjs.png"></a>
-		<a href="http://nodejs.org/api/"><img src="nodejs.png"></a>
-		<a href="http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx"><img src="csharp.png"></a>
-		<a href="http://www.gnu.org/software/bash/manual/bashref.html"><img src="bash.png"></a>
-		<a href="http://socket.io/docs/"><img src="socket.png"></a>
-		<br>
-		<!--This section is for various learning resources I needed before,
-		 feel free to use this #learn for whatever it is you need to do.-->
-</div>
+<!-- Uncomment to use a list of links at the bottom of the page.
 
+<div id="learn">
+	<div class="subtitle"><img src="readingList.gif"></img></div>
+		<p><a href="http://www.w3schools.com">w3schools <b id="tag"> HTML JS CSS MYSQL</b></a></p>
+		<p><a href="http://nodejs.org/api/">NodeJS API Reference <b id="tag"> JS</b></a></p>
+		<p><a href="http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx">Microsoft C# Reference<b id="tag"> C#</b></a></p>
+		<p><a href="http://www.gnu.org/software/bash/manual/bashref.html">GNU BASH Online Manual<b id="tag"> BASH</b></a></p>
+		<p><a href="http://www.mathcurve.com">Math Curve (French)<b id="tag"> MATH</b></a></p>        
+<br></div> 
+ 
+-->
 </body>
-</html>
